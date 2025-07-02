@@ -1,0 +1,28 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "browserslist": "last 2 versions, > 0.5% and ie >= 11",
+  "scripts": {
+    "start": "parcel index.html && parcel watch index.html",
+    "dev": "parcel index.html --no-cache --no-source-maps --port 1234",
+    "build": "parcel build index.html --no-cache",
+    "clean": "rm -rf .parcel-cache dist",
+    "clean:win": "if exist .parcel-cache rmdir /s /q .parcel-cache && if exist dist rmdir /s /q dist",
+    "fresh": "npm run clean:win && npm run start",
+    "kill": "taskkill /f /im node.exe",
+    "reset": "npm run kill && npm run clean:win && npm run start"
+  },
+  "author": "Shiv Nand",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.15.4",
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "core-js": "^3.43.0",
+    "fractional": "^1.0.0",
+    "fracty": "^1.0.12",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
